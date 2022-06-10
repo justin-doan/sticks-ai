@@ -82,28 +82,31 @@ def make_move(game, choice, turn):
             else:
                 print("Invalid split option, choose again")
 
-SQUARESIZE = 200
-COLUMN_COUNT = 2
-ROW_COUNT = 2
-def draw_game(game):
-    offset = SQUARESIZE
-    for c in range(COLUMN_COUNT):
-        for r in range(ROW_COUNT):
-            pygame.draw.rect(screen, BG_COLOR, (c*SQUARESIZE, r*SQUARESIZE+offset, SQUARESIZE, SQUARESIZE))
+# Draw board block
+# SQUARESIZE = 200
+# COLUMN_COUNT = 2
+# ROW_COUNT = 2
+# def draw_game(game):
+#     offset = SQUARESIZE
+#     for c in range(COLUMN_COUNT):
+#         for r in range(ROW_COUNT):
+#             pygame.draw.rect(screen, BG_COLOR, (c*SQUARESIZE, r*SQUARESIZE+offset, SQUARESIZE, SQUARESIZE))
 
-    pygame.display.update()
+#     pygame.display.update()
 # Initialize Game
 game = create_game_space() # Game is a board of 2 players
 game_over = False
 turn = PLAYER_1
 
-pygame.init()
-width = COLUMN_COUNT * SQUARESIZE
-height = (ROW_COUNT + 2) * SQUARESIZE
-size = (width,height)
-screen = pygame.display.set_mode(size)
-draw_game(game)
-pygame.display.update()
+# Py game init block
+
+# pygame.init()
+# width = COLUMN_COUNT * SQUARESIZE
+# height = (ROW_COUNT + 2) * SQUARESIZE
+# size = (width,height)
+# screen = pygame.display.set_mode(size)
+# draw_game(game)
+# pygame.display.update()
 
 # Game Loop
 # It will always be game[turn]'s turn
