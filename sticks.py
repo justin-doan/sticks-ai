@@ -81,6 +81,7 @@ def make_move(game, choice, turn):
             left_hand_amt = int(input('How much do you want to put on your left hand: '))
             right_hand_amt = int(input('How much do you want to put on your right hand: '))
             # Valid split is left and right sum to the total and the new left isn't the old right (and vice versa), no mirror splits allowed
+            # Doesn't check if when person "splits" theyre actually making changes: so if it's 2 and 1 and person chooses 2 and 1 it will allow it
             if left_hand_amt + right_hand_amt == total_fingers and left_hand_amt != game[turn].right_hand.num_fingers and right_hand_amt != game[turn].left_hand.num_fingers:
                 split(game[turn], left_hand_amt, right_hand_amt)
                 break
